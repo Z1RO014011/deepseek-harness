@@ -1,0 +1,26 @@
+{
+  "name": "dsh-lol-coach",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/plugin.js",
+  "exports": {
+    ".": "./src/plugin.js"
+  },
+  "files": [
+    "src/**/*.js",
+    "cordis.patch.yml"
+  ],
+  "engines": {
+    "node": ">=24.9.0",
+    "dsh": ">=0.2.0-0 <0.3.0-0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.2.0-0 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
